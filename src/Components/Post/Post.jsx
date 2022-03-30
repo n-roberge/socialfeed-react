@@ -1,19 +1,27 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
 const Post = (props) => {
-    return ( 
-        
-        <Card style={{ width: '20rem' }}>
+
+    const timestamp = new Date().getTime();
+    const date = Date(timestamp);
+
+    return (  
+        <div>
             {props.parentEntries.map((entry) => {
                 return (
-                    <Card.Body>
-                        <Card.Title>{entry.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Date here</Card.Subtitle>
-                        <Card.Text>
-                        {entry.post}
-                        </Card.Text>
-                    </Card.Body>
-                )
-            })};
-        </Card> 
+                    <div class="card-body">
+                        <h5 class="card-title">{entry.name}</h5>
+                        <p class="card-text">{date}</p>
+                        <p class="card-text">{entry.post}</p>
+                        <FontAwesomeIcon icon = {faThumbsUp} />
+                        <FontAwesomeIcon icon = {faThumbsDown} />
+                        
+                    </div>
+                );
+            })}
+        </div>
     );
 }
  

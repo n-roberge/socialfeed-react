@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
+import Post from './Components/Post/Post.jsx';
+import NavBar from './Components/NavBar/NavBar.jsx';
+
 // Form to create post with name and post
 // Feed with name, post, and like and dislike
 
@@ -15,8 +18,10 @@ function App() {
 
   return (
     <div>
+      <NavBar/>
       <CreatePost addNewPost = {addNewEntry}/>
-      <DisplayPosts parentEntries = {entries} />
+      {/* <DisplayPosts parentEntries = {entries} /> */}
+      <Post parentEntries = {entries}/>
     </div>
   );
 }
