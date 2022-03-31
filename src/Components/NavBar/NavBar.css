@@ -1,0 +1,8 @@
+.navbar-text{
+    margin-left: 1em;
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+}

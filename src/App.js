@@ -7,7 +7,8 @@ import './Components/App.css'
 
 function App() {
 
-  const [entries, setEntries] = useState([{name : 'Nick Roberge', post: 'This is a test post.'}, {name : 'Esma Eroglu', post: 'This is yet another test post.'} ]);
+
+  const [entries, setEntries] = useState([{name : 'Nick Roberge', post: 'This is a test post.', date: 'Sat Dec 02 2017 13:49:00 GMT-0600'}, {name : 'Esma Eroglu', post: 'This is yet another test post.', date: 'Tue Feb 01 2022 13:49:00 GMT-0600'} ]);
 
   function addNewEntry(entry){
     let tempEntries = [...entries, entry];

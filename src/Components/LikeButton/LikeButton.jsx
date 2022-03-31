@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import "./LikeButton.css"
+import './LikeButton.css'
 
 const LikeButton = (props) => {
     
@@ -9,7 +9,7 @@ const LikeButton = (props) => {
 
     function handleClick(){
         if (buttonClass === "inactive"){
-            setButtonClass("active");
+            setButtonClass("like");
         }
         else {
             setButtonClass("inactive");
