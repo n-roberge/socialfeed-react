@@ -3,9 +3,7 @@ import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
 import Post from './Components/Post/Post.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
-
-// Form to create post with name and post
-// Feed with name, post, and like and dislike
+import './Components/App.css'
 
 function App() {
 
@@ -19,9 +17,12 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <CreatePost addNewPost = {addNewEntry}/>
-      {/* <DisplayPosts parentEntries = {entries} /> */}
-      <Post parentEntries = {entries}/>
+      <div className = "border-box">
+        <CreatePost addNewPost = {addNewEntry}/>
+      </div>
+      <div className='border-box'>
+        <Post parentEntries = {entries}/>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import LikeButton from '../LikeButton/LikeButton';
+import DislikeButton from '../DislikeButton/DislikeButton';
+import "./Post.css"
 
 const Post = (props) => {
 
@@ -11,13 +11,12 @@ const Post = (props) => {
         <div>
             {props.parentEntries.map((entry) => {
                 return (
-                    <div class="card-body">
-                        <h5 class="card-title">{entry.name}</h5>
-                        <p class="card-text">{date}</p>
-                        <p class="card-text">{entry.post}</p>
-                        <FontAwesomeIcon icon = {faThumbsUp} />
-                        <FontAwesomeIcon icon = {faThumbsDown} />
-                        
+                    <div className="card-body">
+                        <h5 className="card-title">{entry.name}</h5>
+                        <p className="card-date">{date}</p>
+                        <p className="card-text">{entry.post}</p>
+                        <LikeButton />
+                        <DislikeButton />
                     </div>
                 );
             })}

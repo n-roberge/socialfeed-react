@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const CreatePost = (props) => {
 
     const [name, setName] = useState();
@@ -18,11 +17,16 @@ const CreatePost = (props) => {
 
     return (  
         <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input value = {name} onChange = {(event) => setName(event.target.value)}/>
-            <label>Post</label>
-            <input value = {post} onChange = {(event) => setPost(event.target.value)}/>
-            <button type='submit'>Create</button>
+            <div className='form-group'>
+                <label>Name</label>
+                <input value = {name} className = 'form-control' onChange = {(event) => setName(event.target.value)}/>
+            </div>
+            <div className='form-group'>
+                <label>Post</label>
+                <textarea value = {post} rows = "4" className = 'form-control' onChange = {(event) => setPost(event.target.value)}/>
+            </div>
+            
+            <button type='submit'className='btn btn-primary' style={{'margin-top':'1em'}}>Create</button>
         </form>
     );
 }
