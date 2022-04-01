@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DisplayPosts from './Components/DisplayPosts/DisplayPosts.jsx';
 import CreatePost from './Components/CreatePost/CreatePost.jsx';
 import Post from './Components/Post/Post.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
@@ -16,7 +15,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='background'>
       <NavBar/>
       <div className = "border-box">
         <CreatePost addNewPost = {addNewEntry}/>
