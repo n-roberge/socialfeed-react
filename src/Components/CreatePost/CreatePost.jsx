@@ -29,11 +29,11 @@ const CreatePost = (props) => {
     return (  
         <form onSubmit={handleSubmit} style={{"width":"40em"}}>
             <div className='form-group'>
-                <label style={{"font-weight":"bold"}}>Name</label>
+                <label>Name</label>
                 <input value = {name} className = 'form-control' onChange = {(event) => setName(event.target.value)}/>
             </div>
             <div className='form-group'>
-                <label style={{"font-weight":"bold"}}>Post</label>
+                <label>Post</label>
                 <textarea value = {post} rows = "4" className = 'form-control' onChange = {(event) => setPost(event.target.value)}/>
             </div>
             
