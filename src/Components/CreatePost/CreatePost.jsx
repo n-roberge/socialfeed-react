@@ -20,6 +20,10 @@ const CreatePost = (props) => {
         };
         setDate(Date(timestamp))
         props.addNewPost(newEntry);
+
+        //clear form after submit
+        setName("");
+        setPost("");
     }
 
     return (  
